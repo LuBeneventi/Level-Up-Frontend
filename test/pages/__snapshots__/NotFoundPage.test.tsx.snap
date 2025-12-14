@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NotFoundPage > should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="py-5 text-center container"
+  >
+    <h1>
+      404: Página no encontrada
+    </h1>
+    <p>
+      El recurso que buscas no existe en Level-Up Gaming.
+    </p>
+  </div>
+</DocumentFragment>
+`;

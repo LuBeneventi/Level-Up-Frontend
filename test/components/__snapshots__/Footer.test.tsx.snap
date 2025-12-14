@@ -1,0 +1,104 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > should render correctly 1`] = `
+<DocumentFragment>
+  <footer
+    class="py-4 mt-5 border-top"
+    style="background-color: var(--color-negro); border-top-color: var(--color-azul-electrico);"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="mb-3 col-md-4"
+        >
+          <h5
+            style="color: var(--color-verde-neon);"
+          >
+            Level-Up Gaming
+          </h5>
+          <p
+            style="color: var(--color-gris-claro);"
+          >
+            Tu destino para todo lo relacionado con videojuegos.
+          </p>
+        </div>
+        <div
+          class="mb-3 col-md-4"
+        >
+          <h5
+            style="color: var(--color-verde-neon);"
+          >
+            Enlaces
+          </h5>
+          <div
+            class="flex-column nav"
+          >
+            <a
+              class="p-0 nav-link"
+              data-discover="true"
+              href="/sobre-nosotros"
+              style="color: var(--color-gris-claro);"
+            >
+              Sobre Nosotros
+            </a>
+            <a
+              class="p-0 nav-link"
+              data-discover="true"
+              href="/politica-privacidad"
+              style="color: var(--color-gris-claro);"
+            >
+              Política de Privacidad
+            </a>
+            <a
+              class="p-0 nav-link"
+              data-discover="true"
+              href="/terminos-servicio"
+              style="color: var(--color-gris-claro);"
+            >
+              Términos de Servicio
+            </a>
+          </div>
+        </div>
+        <div
+          class="mb-3 col-md-4"
+        >
+          <h5
+            style="color: var(--color-verde-neon);"
+          >
+            Contacto
+          </h5>
+          <ul
+            class="list-unstyled"
+            style="color: var(--color-gris-claro);"
+          >
+            <li>
+              Email: info@levelupgaming.com
+            </li>
+            <li>
+              Teléfono: +123 456 7890
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-3 row"
+      >
+        <div
+          class="text-center col"
+        >
+          <p
+            class="mb-0"
+            style="color: var(--color-gris-claro);"
+          >
+            © 2025 Level-Up Gaming. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

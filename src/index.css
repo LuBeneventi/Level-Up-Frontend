@@ -1,0 +1,194 @@
+/* src/index.css */
+
+/* ------------------------------------
+   1. DEFINICIÓN DE VARIABLES (DARK MODE - PREDETERMINADO)
+------------------------------------ */
+:root {
+  /* Colores Base */
+  --color-negro: #000000;
+  --color-blanco: #FFFFFF;
+  --color-gris-claro: #AAAAAA; 
+  
+  /* Colores de Acento */
+  --color-azul-electrico: #1E90FF; 
+  --color-verde-neon: #39FF14;     
+  --color-fondo-secundario: #222222; 
+  --color-peligro-neon: #FF4444;    
+  
+  /* Tipografía */
+  --font-principal: 'Roboto', sans-serif;
+  --font-encabezado: 'Orbitron', sans-serif;
+}
+
+
+/* ------------------------------------
+   2. ESTILO BASE Y ELEMENTOS DARK MODE
+------------------------------------ */
+body {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  font-family: var(--font-principal);
+  margin: 0; 
+}
+
+/* Header en Dark Mode (Fondo Negro, Texto Blanco) */
+.navbar.bg-dark {
+    background-color: var(--color-negro) !important;
+    border-bottom: 2px solid var(--color-azul-electrico); 
+}
+/* Asegurar que el texto del nav sea blanco en Dark Mode */
+.navbar.bg-dark .navbar-brand,
+.navbar.bg-dark .nav-link {
+    color: var(--color-blanco) !important;
+}
+
+
+/* Footer en Dark Mode */
+footer {
+    background-color: var(--color-negro) !important;
+    border-top-color: var(--color-azul-electrico) !important;
+}
+
+/* Encabezados y Texto Secundario (Dark Mode) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-azul-electrico); 
+  font-family: var(--font-encabezado);
+}
+.text-muted {
+    color: var(--color-gris-claro) !important;
+}
+.btn-success {
+    background-color: var(--color-verde-neon);
+    border-color: var(--color-verde-neon);
+    color: var(--color-negro) !important; 
+    font-weight: bold;
+}
+
+
+/* ------------------------------------
+   3. LÓGICA DE MODO CLARO (LIGHT MODE)
+------------------------------------ */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #F8F8F8;
+        color: #333333; /* Texto principal oscuro */
+    }
+    
+    /* 🚨 CORRECCIÓN HEADER LIGHT MODE */
+    .navbar.bg-dark {
+        background-color: #FFFFFF !important;
+        border-bottom: 1px solid #CCCCCC !important;
+    }
+    .navbar.bg-dark .navbar-brand,
+    .navbar.bg-dark .nav-link,
+    .navbar.bg-dark .btn-outline-primary {
+        color: #333333 !important; /* 🚨 Texto oscuro */
+    }
+
+
+    /* Footer en Light Mode */
+    footer {
+        background-color: #EEEEEE !important;
+        border-top: 1px solid #CCCCCC !important;
+    }
+    footer p,
+    footer li {
+        color: #555555 !important;
+    }
+    footer h5 {
+        color: #007bff !important;
+    }
+
+
+    /* Encabezados y Tarjetas en Light Mode */
+    h1, h2, h3, h4, h5, h6 {
+        color: #007bff; /* Azul estándar */
+    }
+    .text-muted {
+        color: #666666 !important;
+    }
+    
+    .card,
+    .modal-content,
+    .alert {
+        background-color: #FFFFFF !important;
+        border-color: #DDDDDD !important;
+        color: #333333 !important;
+    }
+
+    /* Hero Section en Light Mode */
+    .hero-section {
+        background-color: #FFFFFF !important; 
+        border-bottom-color: #007bff !important;
+    }
+    .hero-section h1 {
+        color: #007bff !important;
+    }
+    .hero-section p {
+        color: #333333 !important;
+    }
+}
+
+/* ----- Tabla personalizada estilo Dark Admin ----- */
+
+.table-wrap {
+    background-color: #0d0d0d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-azul-electrico);
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.15);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-principal);
+}
+
+/* Títulos */
+.custom-table thead {
+    background-color: #111;
+}
+
+.custom-table th {
+    color: var(--color-verde-neon);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-azul-electrico);
+}
+
+/* Celdas */
+.custom-table td {
+    padding: 10px;
+    color: var(--color-blanco);
+    border-bottom: 1px solid #222;
+}
+
+/* Título en verde neon */
+.custom-table .title-cell {
+    color: var(--color-verde-neon);
+}
+
+/* Hover suave */
+.custom-table tbody tr:hover {
+    background-color: #151515;
+    transition: 0.2s ease;
+}
+
+/* Última fila sin borde grueso */
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ------------------------------------
+   4. FIX: BOTÓN DE CIERRE EN MODALES OSCUROS
+------------------------------------ */
+/* Hacer visible el botón X de cerrar en modales con fondo oscuro */
+.modal-header .btn-close {
+    filter: invert(1) brightness(2);
+    opacity: 1;
+}
+
