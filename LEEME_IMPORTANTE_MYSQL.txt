@@ -1,0 +1,28 @@
+!!! IMPORTANTE PARA EL EXAMEN / PRESENTACIÓN !!!
+
+Si al intentar crear un producto con imagen recibes un error 403 o "PacketTooBigException", es porque MySQL tiene un límite de tamaño por defecto muy bajo (1MB).
+
+TIENES QUE CONFIGURAR ESTO EN EL COMPUTADOR DONDE CORRA LA BASE DE DATOS (XAMPP):
+
+OPCIÓN RÁPIDA (Temporal, se borra al reiniciar MySQL):
+1. Abre una terminal (PowerShell o CMD).
+2. Pega y ejecuta este comando:
+   C:\xampp\mysql\bin\mysql.exe -u root -e "SET GLOBAL max_allowed_packet=67108864;"
+3. ¡Listo! Ya puedes usar la app.
+
+OPCIÓN PERMANENTE (Recomendada):
+1. Abre el Panel de Control de XAMPP.
+2. Detén el servicio "MySQL" (Botón Stop).
+3. Haz clic en el botón "Config" de la fila de MySQL y elige "my.ini".
+4. En el archivo de texto que se abre, busca la sección que dice exactly: [mysqld]
+   (Usa Ctrl+B para buscar. ¡Ojo! Debe terminar en "d", no confundir con [mysql]).
+
+5. Justo debajo de [mysqld], agrega o modifica esta línea:
+
+   max_allowed_packet=64M
+
+6. Guarda el archivo (Ctrl+G) y ciérralo.
+7. Dale al botón "Start" en MySQL.
+8. Reinicia tu Backend (Spring Boot).
+
+¡LISTO! Ahora podrás subir imágenes grandes.
